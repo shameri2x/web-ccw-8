@@ -19,10 +19,34 @@
         اللي رفيجك يتابعها Animeتحتوي على مسلسلات ال myFriendAnime المصفوفة الثانية
       */
 
+      let myAnime = [
+        "blacklist" , "sherlock" , "s" , "b" , "d"
+      ]
+
+      let myFriendAnime = [
+        "sherlock" , " stranger things " , "s" , "b" , "d"
+      ]
+
+      let mutualAnime = []
+
+      myAnime.forEach(element => {
+      for (let a = 0; a < myFriendAnime.length; a++) {
+      if (myFriendAnime[a]==element) {
+
+        mutualAnime.push(element)
+        
+      }
+        
+      }
+    });
+
+      // console.log(mutualAnime)
       // 2
       // mutualAnime عرف مصفوفة فاضية سمها
 
-      // mutualAnimeقارن المصفوفتين وضيف المسلسلات المشتركة ل
+    
+
+      // mutualAnimeقارن المصفوفتين وضيف المسلسلات المشتركة 
 
       // consoleفي ال mutualAnime اطبع
       // ما طبع؟ أكيد في شي ناقص، عرفته؟
@@ -34,7 +58,7 @@
       ul.className = "myList";
       document.getElementById("container").appendChild(ul);
 
-      function createList(arr) {
+      function createList() {
         mutualAnime.forEach(function (data) {
           let li = document.createElement("li");
           ul.appendChild(li);
@@ -42,6 +66,7 @@
           li.className = "listItem";
         });
       }
+      createList()
     </script>
   </body>
 </html>
